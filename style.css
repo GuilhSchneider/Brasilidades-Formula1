@@ -1,0 +1,393 @@
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #dfdede;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+header {
+    backdrop-filter: blur(4px);
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.700);
+}
+
+header img {
+    position: absolute;
+    height: 23px;
+    width: auto;
+    left: 25px;
+}
+
+header a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 3px;
+    font-size: 1.07em;
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.4s ease;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+
+header a.rolagem {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+header nav {
+    width: 50%;
+}
+
+header div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#fundo {
+    display: flex;
+    justify-content: center;
+}
+
+.imgFundo {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.fundoBlack {
+    background-color: rgba(0, 0, 0, 0.750);
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
+.sennaPrincipal {
+    margin-top: 15px;
+    filter: drop-shadow(0px 3px 3px rgb(255, 255, 255));
+    width: 400px;
+}
+
+#f1 {
+    position: absolute;
+    height: 60px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 380px;
+}
+
+#f1 h1 {
+    font-size: 6.5em;
+    margin: 0;
+    color: rgba(239, 241, 243, 0.952);
+    font-style: italic;
+}
+
+#f1 p {
+    font-family: monospace;
+    color: rgb(228, 228, 228);
+    width: 920px;
+    font-size: 1.5em;
+    filter: drop-shadow(0px 3px 3px rgb(0, 0, 0));
+}
+
+#cards {
+    background-color: #181818;
+    padding: 140px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 500px;
+}
+
+#cards h1 {
+    bottom: 285px;
+    position: relative;
+    font-size: 4.5em;
+    margin: 0;
+    color: rgba(239, 241, 243, 0.952);
+    font-style: italic;
+    filter: drop-shadow(0px 5px 2px rgb(0, 0, 0));
+}
+
+#card1 {
+    z-index: 5;
+}
+
+#card2 {
+    transform: translate(-11rem, 1.3rem) rotate(-7deg) scale(0.9346, 0.9346);
+    z-index: 4;
+}
+
+#card3 {
+    transform: translate(-22rem, 4rem) rotate(-14deg) scale(0.8498, 0.8498);
+    z-index: 3;
+}
+
+#card4 {
+    transform: translate(11rem, 1.3rem) rotate(7deg) scale(0.9346, 0.9346);
+    z-index: 2;
+}
+
+#card5 {
+    transform: translate(22rem, 4rem) rotate(14deg) scale(0.8498, 0.8498);
+    z-index: 1;
+}
+
+#cards img {
+    width: 300px;
+    min-height: 460px;
+    border-radius: 30px;
+    position: absolute;
+    border: 1px solid rgba(48, 48, 48, 0.445);
+    transition: all 0.3s;
+    object-fit: cover;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.250);
+}
+
+#cards img:hover {
+    height: 470px;
+    margin-bottom: 80px;
+}
+
+#pilotosCard {
+    gap: 50px;
+    padding: 50px 50px;
+    background-color: #111111;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.cardPiloto {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    width: 450px;
+    height: 520px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.150);
+}
+
+.cardPiloto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cardPiloto h1 {
+    display: flex;
+    height: 30px;
+    margin: 5px 10px;
+    font-size: 1.7em;
+    font-style: italic;
+    filter: drop-shadow(0px 3px 3px rgb(0, 0, 0));
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.cardPiloto h2 {
+    color: #dfdfdf;
+    font-size: 1.3em;
+}
+
+.cardPiloto span {
+    color: #f1c40f !important;
+}
+
+.cardPiloto p {
+    padding: 0 30px 0 30px;
+    line-height: 1.2em;
+    color: #ccc;
+}
+
+.cardPiloto:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.300);
+}
+
+#pilotosCuriosidades {
+    padding-top: 50px;
+    background-color: #181818;
+    padding-bottom: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#divCuriosidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 65%;
+}
+
+#pilotosCuriosidades h1 {
+    font-size: 3.5em;
+    margin: 15px 0 15px 0;
+    color: rgba(239, 241, 243, 0.952);
+    font-style: italic;
+    filter: drop-shadow(0px 5px 2px rgb(0, 0, 0));
+}
+
+.curiosidade {
+    display: flex;
+    background-color: #1e1e1e;
+    padding: 20px;
+    min-width: 420px;
+    min-height: 250px;
+    max-height: 250px;
+    max-width: 420px;
+    margin: 10px;
+    border-radius: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.150);
+    transition: 0.3s ease;
+}
+
+.curiosidade img {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.250);
+}
+
+.curiosidade h2 {
+    width: 100%;
+    margin: 0;
+    color: #dfdfdf;
+    font-size: 1.5em;
+}
+
+.curiosidade p {
+    margin: 10px 0px;
+    line-height: 1.1em;
+    color: #ccc;
+    width: 199px;
+}
+
+.conteudoCuriosidade {
+    color: white;
+    margin-top: 10px;
+    margin-left: 15px;
+    max-width: 200px;
+}
+
+.curiosidade:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    background-color: #111111;
+    padding: 10px 0 0 0;
+    text-align: center;
+    border-top: 3px solid rgba(0, 0, 0, 0.212);
+}
+
+.footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.footerContent h3 {
+    width: 100%;
+    font-size: 2.3em;
+    color: rgb(196, 196, 196);
+    margin: 10px 0 15px 0;
+}
+
+.footerSocials a {
+    margin: 5px 5px 0px 5px;
+    display: inline-table;
+    text-decoration: none;
+    width: 0px;
+    height: 0px;
+}
+
+.footerSocials img {
+    height: 35px;
+    opacity: 0.5;
+    transition: 0.3s ease;
+}
+
+.footerSocials img:hover {
+    opacity: 1;
+}
+
+.footerSocials p {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    color: rgb(196, 196, 196);
+}
+
+.footerCopyright {
+    color: rgb(196, 196, 196);
+    font-size: 1.25em;
+    width: 100%;
+    height: 40px;
+    border-top: 3px solid rgba(34, 34, 34, 0.11);
+    padding-top: 15px;
+    margin: 35px 0 0px 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.575);
+}
