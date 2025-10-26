@@ -263,7 +263,6 @@ header div {
     justify-content: center;
     align-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 #divCuriosidades {
@@ -299,6 +298,7 @@ header div {
     align-items: center;
     box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.150);
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .curiosidade img {
@@ -390,4 +390,5 @@ footer {
     padding-top: 15px;
     margin: 35px 0 0px 0;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.575);
+
 }
